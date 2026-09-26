@@ -1,13 +1,18 @@
 # cancer-classification-using-neural-network
 
+
+
 📌 Project Overview
 
 This project uses a Neural Network (Multi-Layer Perceptron / MLP) to classify breast cancer tumors into two categories:
 
 🔴 Malignant – cancerous
+
 🟢 Benign – non-cancerous
 
+
 The project uses the Breast Cancer Wisconsin (Diagnostic) dataset available through Scikit-learn. The dataset contains 569 samples, 30 numerical features, and 2 target classes.
+
 
 ⚠️ Note: This is an educational machine-learning project and is not a medical diagnosis system.
 
@@ -17,17 +22,27 @@ The project uses the Breast Cancer Wisconsin (Diagnostic) dataset available thro
 The main objectives of this project are:
 
 Understand a binary classification problem.
+
 Perform data preprocessing.
+
 Split the dataset into training and testing sets.
+
 Build a Neural Network classification model.
+
 Train the model using training data.
+
 Evaluate model performance.
+
 Predict whether a tumor is malignant or benign.
+
 Understand how Neural Networks can be applied to healthcare datasets.
 
 
+
 📊 Dataset
+
 Breast Cancer Wisconsin (Diagnostic) Dataset
+
 
 The dataset is provided by Scikit-learn's load_breast_cancer() function.
 
@@ -38,72 +53,111 @@ Number of Classes	2
 Malignant Samples	212
 Benign Samples	357
 
+
 The 30 features are numerical measurements derived from digitized images of breast mass cell nuclei.
 
 Target Classes
+
 0 → Malignant
+
 1 → Benign
+
+
 🧠 What is a Neural Network?
 
 A Neural Network is a machine-learning model inspired by the structure of biological neural systems.
 
 A simple neural network contains:
 
+
 Input Layer
+
      ↓
 Hidden Layer(s)
+
      ↓
 Output Layer
 
+
+
 For this project:
 
+
 30 Input Features
+
+       ↓
+Hidden Layer
+
        ↓
 Hidden Layer
        ↓
-Hidden Layer
+       
+   Output
        ↓
-Output
-       ↓
+       
 Malignant / Benign
+
 
 The Scikit-learn MLPClassifier implements a Multi-Layer Perceptron classifier and trains using backpropagation.
 
 
 🛠️ Technologies Used
+
 🐍 Python
+
 📊 NumPy
+
 🐼 Pandas
+
 📈 Matplotlib
+
 🤖 Scikit-learn
+
 📓 Jupyter Notebook
+
 💻 Git & GitHub
+
+
+
 📦 Libraries Installation
 
 
 Install the required libraries using:
 
 pip install numpy pandas matplotlib scikit-learn jupyter
+
 🔄 Project Workflow
+
 Dataset
+
    ↓
 Data Loading
+
    ↓
 Data Understanding
    ↓
+   
 Data Preprocessing
+
    ↓
 Train-Test Split
    ↓
+   
 Feature Scaling
+
    ↓
 Neural Network Model
+
    ↓
 Model Training
+
    ↓
 Prediction
+
    ↓
 Model Evaluation
+
+
 🧪 Step 1: Import Libraries
 import numpy as np
 import pandas as pd
@@ -116,6 +170,7 @@ from sklearn.neural_network import MLPClassifier
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
+
 
 📥 Step 2: Load Dataset
 data = load_breast_cancer()
@@ -144,6 +199,7 @@ Here:
 80% → Training data
 20% → Testing data
 
+
 📏 Step 4: Feature Scaling
 
 Neural Networks generally benefit from appropriately scaled input features.
@@ -154,6 +210,7 @@ X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
 
 The scaler is fitted only on the training data and then applied to the test data.
+
 
 
 🤖 Step 5: Create Neural Network
@@ -181,6 +238,7 @@ model.fit(X_train, y_train)
 During training, the Neural Network learns patterns from the training data.
 
 
+
 🔮 Step 7: Make Predictions
 y_pred = model.predict(X_test)
 
@@ -190,6 +248,7 @@ The model predicts one of the two classes:
 
 0 → Malignant
 1 → Benign
+
 
 📊 Step 8: Model Evaluation
 Accuracy
@@ -209,6 +268,7 @@ Precision
 Recall
 F1-score
 Support
+
 📉 Confusion Matrix Visualization
 import seaborn as sns
 
@@ -252,7 +312,8 @@ plt.show()
           ┌─────┴─────┐
           ▼           ▼
       Malignant     Benign
-	  
+
+          
 📁 Project Folder Structure
 Cancer-Classification-Neural-Network/
 │
@@ -268,7 +329,9 @@ Cancer-Classification-Neural-Network/
 │
 └── 📁 models/
     └── neural_network_model.pkl
-	
+
+
+        
 📋 requirements.txt
 
 Create a file named:
@@ -285,7 +348,9 @@ seaborn
 scikit-learn
 jupyter
 
+
 💡 Key Concepts Learned
+
 
 Through this project, I learned:
 
@@ -307,6 +372,7 @@ Recall
 F1-score
 GitHub project organization
 
+
 🚀 Future Improvements
 
 This project can be improved by:
@@ -319,6 +385,7 @@ Creating a Streamlit web application.
 Adding interactive prediction.
 Saving and loading the trained model.
 Creating a better visualization dashboard.
+
 
 ⚠️ Disclaimer
 
@@ -336,7 +403,15 @@ Artificial Intelligence & Data Science Student
 
 Skills Used
 
-Python • Machine Learning • Neural Networks • Scikit-learn • Data Science
+Python
+
+• Machine Learning
+
+• Neural Networks
+
+• Scikit-learn
+
+• Data Science
 
 
 ⭐ If You Like This Project
@@ -345,5 +420,6 @@ If this project helped you understand Neural Networks and Machine Learning, cons
 
 
 📚 References
+
 Scikit-learn Breast Cancer Dataset documentation.
 Scikit-learn Neural Network / MLP documentation.
